@@ -1,0 +1,1 @@
+export sql_root_pwd=pulp_prediction

@@ -1,0 +1,5 @@
+LOAD DATA INFILE '../../data/movelog6-cleaned.csv' 
+INTO TABLE meoviestreamFIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 0 ROWS;

@@ -1,0 +1,1 @@
+mongosh "mongodb+srv://cluster0.xuddjop.mongodb.net/myFirstDatabase" --apiVersion 1 --username mlproduction

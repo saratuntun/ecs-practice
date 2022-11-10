@@ -1,0 +1,27 @@
+DATA:
+  data_path: ./data
+  STREAM:
+      topic: movielog6
+      stream_name: kafka_log-movielog6_stream
+      # How many message streamed each udpate
+      num_new_messages_per_update: 1.e+3
+      # Max size of message to keep (False to keep everything) [don't apply to mongo atlas]
+      max_ent: 1.e+6
+      # Add movie/user details
+      add_external_features: False
+      # file name suffix of ouput
+      processed_suffix: _processed      
+      
+MONGO_ATLAS:
+    # update streamed result to mongo atlas
+    upload: True
+    # connection credentials
+    CONNECTION:
+        host: cluster0.xuddjop.mongodb.net
+        db: movielog
+        username: mlproduction
+        password: pulp_prediction
+        insert_to_collection: combined-rateonly
+    
+      
+  
