@@ -1,4 +1,4 @@
 # ./gunicorn.conf.py
-workers = 5    # 定义同时开启的处理请求的进程数量，根据网站流量适当调整
-worker_class = "gevent"   # 采用gevent库，支持异步处理请求，提高吞吐量
-bind = "0.0.0.0:3000" # 设置端口，这里注意要设置成0.0.0.0，如果设置为127.0.0.1的话就只能本地访问服务了
+workers = 5     # Define the number of processes that are simultaneously started to process requests
+worker_class = "gevent"   # The gevent library is used to support asynchronous request processing and improve throughput
+bind = "0.0.0.0:3000" # Relax the Listening IP to facilitate the communication between Dockers and the host
